@@ -5,51 +5,38 @@ import { useState } from "react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <header className="sticky top-0 z-40 w-full bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <div className="text-2xl font-bold text-doorshop-dark">
-              <span className="text-doorshop-red">О</span>
-              <span className="text-doorshop-brown">К</span>
-              <span className="text-doorshop-red">Н</span>
-              <span className="text-doorshop-brown">А</span>
-              <span className="mx-2">•</span>
-              <span className="text-doorshop-red">Д</span>
-              <span className="text-doorshop-brown">В</span>
-              <span className="text-doorshop-red">Е</span>
-              <span className="text-doorshop-brown">Р</span>
-              <span className="text-doorshop-red">И</span>
-            </div>
+          <div className="text-2xl font-bold text-shop-dark">
+            <span className="text-shop-red">ОКНА</span>
+            <span className="mx-2">•</span>
+            <span className="text-shop-brown">ДВЕРИ</span>
           </div>
 
           {/* Мобильная навигация */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={toggleMenu}>
+            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
 
           {/* Десктопная навигация */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#features" className="text-doorshop-dark hover:text-doorshop-red transition">
-              Преимущества
+            <a href="#catalog" className="text-shop-dark hover:text-shop-red transition">
+              Каталог
             </a>
-            <a href="#doors" className="text-doorshop-dark hover:text-doorshop-red transition">
+            <a href="#doors" className="text-shop-dark hover:text-shop-red transition">
               Двери
             </a>
-            <a href="#windows" className="text-doorshop-dark hover:text-doorshop-red transition">
+            <a href="#windows" className="text-shop-dark hover:text-shop-red transition">
               Окна
             </a>
-            <a href="#contact" className="text-doorshop-dark hover:text-doorshop-red transition">
+            <a href="#contact" className="text-shop-dark hover:text-shop-red transition">
               Контакты
             </a>
-            <Button className="bg-doorshop-red hover:bg-doorshop-brown text-white">
+            <Button className="bg-shop-red hover:bg-shop-brown text-white">
               <PhoneCall className="mr-2 h-4 w-4" /> 8-904-087-23-77
             </Button>
           </nav>
@@ -60,34 +47,34 @@ const Header = () => {
           <div className="md:hidden mt-4 bg-white rounded-lg shadow-md p-4">
             <nav className="flex flex-col space-y-4">
               <a 
-                href="#features" 
-                className="text-doorshop-dark hover:text-doorshop-red transition"
-                onClick={toggleMenu}
+                href="#catalog" 
+                className="text-shop-dark hover:text-shop-red transition"
+                onClick={() => setIsMenuOpen(false)}
               >
-                Преимущества
+                Каталог
               </a>
               <a 
                 href="#doors" 
-                className="text-doorshop-dark hover:text-doorshop-red transition"
-                onClick={toggleMenu}
+                className="text-shop-dark hover:text-shop-red transition"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Двери
               </a>
               <a 
                 href="#windows" 
-                className="text-doorshop-dark hover:text-doorshop-red transition"
-                onClick={toggleMenu}
+                className="text-shop-dark hover:text-shop-red transition"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Окна
               </a>
               <a 
                 href="#contact" 
-                className="text-doorshop-dark hover:text-doorshop-red transition"
-                onClick={toggleMenu}
+                className="text-shop-dark hover:text-shop-red transition"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Контакты
               </a>
-              <Button className="bg-doorshop-red hover:bg-doorshop-brown text-white w-full">
+              <Button className="bg-shop-red hover:bg-shop-brown text-white w-full">
                 <PhoneCall className="mr-2 h-4 w-4" /> 8-904-087-23-77
               </Button>
             </nav>

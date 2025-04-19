@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
 import ProductCategory from "@/components/ProductCategory";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -61,21 +60,21 @@ const HomePage = () => {
       name: "Окно ПВХ стандарт",
       price: 5500,
       image: "/placeholder.svg",
-      description: "Стандартное пластиковое окно с двойным стеклопакетом и поворотно-откидной створкой"
+      description: "Стандартное пластиковое окно с двойным стеклопакетом"
     },
     {
       id: 8,
       name: "Окно с энергосбережением",
       price: 7800,
       image: "/placeholder.svg",
-      description: "Энергосберегающее окно с повышенной теплоизоляцией и шумозащитой"
+      description: "Энергосберегающее окно с повышенной теплоизоляцией"
     },
     {
       id: 9,
       name: "Балконная система",
       price: 12300,
       image: "/placeholder.svg",
-      description: "Комплексное остекление балкона с дверью и окнами, защита от холода и шума"
+      description: "Комплексное остекление балкона с дверью и окнами"
     }
   ];
 
@@ -84,20 +83,22 @@ const HomePage = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <Features />
         <ProductCategory 
+          id="doors"
           title="Входные двери" 
-          icon={<KeyRound className="h-8 w-8 text-doorshop-red" />}
+          icon={<KeyRound className="h-6 w-6 text-shop-red" />}
           products={entranceDoors} 
         />
         <ProductCategory 
+          id="interior-doors"
           title="Межкомнатные двери" 
-          icon={<DoorClosed className="h-8 w-8 text-doorshop-brown" />}
+          icon={<DoorClosed className="h-6 w-6 text-shop-brown" />}
           products={interiorDoors} 
         />
         <ProductCategory 
+          id="windows"
           title="Пластиковые окна" 
-          icon={<Windows className="h-8 w-8 text-blue-500" />}
+          icon={<Windows className="h-6 w-6 text-blue-500" />}
           products={windows} 
         />
         <Contact />

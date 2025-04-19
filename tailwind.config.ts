@@ -12,7 +12,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
@@ -24,11 +24,10 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        "doorshop-red": "hsl(var(--doorshop-red))",
-        "doorshop-brown": "hsl(var(--doorshop-brown))",
-        "doorshop-background": "hsl(var(--doorshop-background))",
-        "doorshop-dark": "hsl(var(--doorshop-dark))",
-        "doorshop-accent": "hsl(var(--doorshop-accent))",
+        "shop-red": "hsl(var(--shop-red))",
+        "shop-brown": "hsl(var(--shop-brown))",
+        "shop-dark": "hsl(var(--shop-dark))",
+        "shop-light": "hsl(var(--shop-light))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -62,20 +61,6 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

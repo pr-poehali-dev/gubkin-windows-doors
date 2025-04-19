@@ -24,46 +24,15 @@
   --ring: 221.2 83.2% 53.3%;
   --radius: 0.5rem;
   
-  /* Цвета для магазина дверей */
-  --doorshop-red: 0 72% 42%;
-  --doorshop-brown: 28 40% 35%;
-  --doorshop-background: 28 20% 98%;
-  --doorshop-dark: 28 20% 15%;
-  --doorshop-accent: 28 70% 60%;
-}
-
-.dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 48%;
+  /* Основные цвета */
+  --shop-red: 0 73% 41%;
+  --shop-brown: 28 34% 35%;
+  --shop-dark: 0 0% 20%;
+  --shop-light: 0 0% 98%;
 }
 
 body {
-  background-color: hsl(var(--doorshop-background));
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: hsl(var(--shop-light));
+  color: hsl(var(--shop-dark));
 }
