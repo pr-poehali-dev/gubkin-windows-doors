@@ -1,10 +1,10 @@
-import Header from "@/components/Header"
-import Hero from "@/components/Hero"
-import Features from "@/components/Features"
-import ProductCategory from "@/components/ProductCategory"
-import Contact from "@/components/Contact"
-import Footer from "@/components/Footer"
-import { DoorClosed, Windows } from "lucide-react"
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import ProductCategory from "@/components/ProductCategory";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import { DoorClosed, KeyRound, Windows } from "lucide-react";
 
 const HomePage = () => {
   const entranceDoors = [
@@ -24,12 +24,12 @@ const HomePage = () => {
     },
     {
       id: 3,
-      name: "Дверь «Mistral 8S»",
-      price: 6500,
-      image: "https://cdn.poehali.dev/files/95b07be1-d984-4019-844a-4c1d13c6c280.jpg",
-      description: "Элегантная дверь в светлых тонах с горизонтальными вставками"
+      name: "Дверь «Винетта»",
+      price: 26500,
+      image: "https://cdn.poehali.dev/files/b26376d3-4e92-4acf-88e2-30682ddd9616.jpg",
+      description: "Премиальная входная дверь с элегантным дизайном и усиленной защитой"
     }
-  ]
+  ];
 
   const interiorDoors = [
     {
@@ -43,17 +43,41 @@ const HomePage = () => {
       id: 5,
       name: "Дверь «VDI-01»",
       price: 4500,
-      image: "https://cdn.poehali.dev/files/b26376d3-4e92-4acf-88e2-30682ddd9616.jpg",
+      image: "https://cdn.poehali.dev/files/77b13406-3d47-4bd5-aa3a-9e2c86aad627.jpg",
       description: "Классическая дверь в светлом цвете с матовым стеклом"
     },
     {
       id: 6,
-      name: "Дверь «Винетта»",
-      price: 26500,
-      image: "https://cdn.poehali.dev/files/77b13406-3d47-4bd5-aa3a-9e2c86aad627.jpg",
-      description: "Премиальная межкомнатная дверь с элегантным дизайном и отделкой"
+      name: "Дверь «Mistral 8S»",
+      price: 6500,
+      image: "https://cdn.poehali.dev/files/95b07be1-d984-4019-844a-4c1d13c6c280.jpg",
+      description: "Элегантная дверь в светлых тонах с горизонтальными вставками"
     }
-  ]
+  ];
+
+  const windows = [
+    {
+      id: 7,
+      name: "Окно ПВХ стандарт",
+      price: 5500,
+      image: "/placeholder.svg",
+      description: "Стандартное пластиковое окно с двойным стеклопакетом и поворотно-откидной створкой"
+    },
+    {
+      id: 8,
+      name: "Окно с энергосбережением",
+      price: 7800,
+      image: "/placeholder.svg",
+      description: "Энергосберегающее окно с повышенной теплоизоляцией и шумозащитой"
+    },
+    {
+      id: 9,
+      name: "Балконная система",
+      price: 12300,
+      image: "/placeholder.svg",
+      description: "Комплексное остекление балкона с дверью и окнами, защита от холода и шума"
+    }
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -63,7 +87,7 @@ const HomePage = () => {
         <Features />
         <ProductCategory 
           title="Входные двери" 
-          icon={<DoorClosed className="h-8 w-8 text-doorshop-red" />}
+          icon={<KeyRound className="h-8 w-8 text-doorshop-red" />}
           products={entranceDoors} 
         />
         <ProductCategory 
@@ -74,35 +98,13 @@ const HomePage = () => {
         <ProductCategory 
           title="Пластиковые окна" 
           icon={<Windows className="h-8 w-8 text-blue-500" />}
-          products={[
-            {
-              id: 7,
-              name: "Окно ПВХ стандарт",
-              price: 5500,
-              image: "https://cdn.poehali.dev/files/77b13406-3d47-4bd5-aa3a-9e2c86aad627.jpg",
-              description: "Стандартное пластиковое окно с двойным стеклопакетом"
-            },
-            {
-              id: 8,
-              name: "Окно с энергосбережением",
-              price: 7800,
-              image: "https://cdn.poehali.dev/files/77b13406-3d47-4bd5-aa3a-9e2c86aad627.jpg",
-              description: "Энергосберегающее окно с повышенной теплоизоляцией"
-            },
-            {
-              id: 9,
-              name: "Балконная система",
-              price: 12300,
-              image: "https://cdn.poehali.dev/files/77b13406-3d47-4bd5-aa3a-9e2c86aad627.jpg",
-              description: "Комплексное остекление балкона с дверью и окнами"
-            }
-          ]} 
+          products={windows} 
         />
         <Contact />
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

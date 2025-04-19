@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -24,6 +24,11 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        "doorshop-red": "hsl(var(--doorshop-red))",
+        "doorshop-brown": "hsl(var(--doorshop-brown))",
+        "doorshop-background": "hsl(var(--doorshop-background))",
+        "doorshop-dark": "hsl(var(--doorshop-dark))",
+        "doorshop-accent": "hsl(var(--doorshop-accent))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -52,12 +57,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        doorshop: {
-          red: "#c32f27",
-          brown: "#8b4513",
-          light: "#f5f5f5",
-          dark: "#1e1e1e"
-        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,7 +79,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
 
-export default config
+export default config;

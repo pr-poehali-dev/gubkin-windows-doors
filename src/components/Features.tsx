@@ -1,48 +1,67 @@
-import { Check, Shield, TruckIcon, Banknote } from "lucide-react"
+import { Shield, Truck, Tool, Award, ThumbsUp, BadgePercent } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      icon: <Check className="h-8 w-8 text-primary" />,
-      title: "Широкий ассортимент",
-      description: "Более 100 моделей дверей и окон от эконом до премиум класса"
+      icon: <Shield className="h-10 w-10 text-doorshop-red" />,
+      title: "Надежность и безопасность",
+      description: "Все двери и окна изготовлены из высокопрочных материалов, обеспечивающих безопасность вашего дома"
     },
     {
-      icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Гарантия качества",
-      description: "Все товары сертифицированы и имеют гарантию от производителя"
+      icon: <Truck className="h-10 w-10 text-doorshop-red" />,
+      title: "Быстрая доставка",
+      description: "Доставим заказ в течение 1-3 дней по Губкину и области"
     },
     {
-      icon: <TruckIcon className="h-8 w-8 text-primary" />,
-      title: "Доставка и установка",
-      description: "Профессиональная доставка и монтаж по Губкину и области"
+      icon: <Tool className="h-10 w-10 text-doorshop-red" />,
+      title: "Профессиональный монтаж",
+      description: "Установка окон и дверей производится опытными специалистами с многолетним стажем"
     },
     {
-      icon: <Banknote className="h-8 w-8 text-primary" />,
-      title: "Выгодные цены",
-      description: "Регулярные акции и специальные предложения для наших клиентов"
+      icon: <Award className="h-10 w-10 text-doorshop-red" />,
+      title: "Высокое качество",
+      description: "Работаем только с проверенными производителями и качественными материалами"
+    },
+    {
+      icon: <ThumbsUp className="h-10 w-10 text-doorshop-red" />,
+      title: "Индивидуальный подход",
+      description: "Учитываем все пожелания клиента и помогаем с выбором оптимального варианта"
+    },
+    {
+      icon: <BadgePercent className="h-10 w-10 text-doorshop-red" />,
+      title: "Доступные цены",
+      description: "Предлагаем лучшие цены в городе и регулярные акции для наших клиентов"
     }
-  ]
+  ];
 
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container">
-        <h2 className="text-3xl font-bold text-center mb-12">Наши преимущества</h2>
+    <section id="features" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-doorshop-dark mb-4">Почему выбирают нас</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Мы предлагаем полный спектр услуг по выбору, доставке и установке 
+            качественных окон и дверей для вашего дома или офиса
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
-              <div className="mb-4 p-3 bg-primary/10 rounded-full">
+            <div 
+              key={index} 
+              className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="bg-white inline-flex p-3 rounded-full mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-doorshop-dark mb-3">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
