@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import ProductCategory from "@/components/ProductCategory";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { DoorClosed, KeyRound, Windows } from "lucide-react";
+import { DoorClosed, KeyRound, LayoutGrid } from "lucide-react";
 
 const HomePage = () => {
   const entranceDoors = [
@@ -98,7 +98,7 @@ const HomePage = () => {
         <ProductCategory 
           id="windows"
           title="Пластиковые окна" 
-          icon={<Windows className="h-6 w-6 text-blue-500" />}
+          icon={<LayoutGrid className="h-6 w-6 text-blue-500" />}
           products={windows} 
         />
         <Contact />
